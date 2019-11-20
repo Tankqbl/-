@@ -89,7 +89,7 @@ var server = http.createServer(function (request, response) {
                 const userArray = JSON.parse(fs.readFileSync(`./db/user.json`))
                 const lastUser = userArray[userArray.length - 1]
                 const newUser = {
-                    id: lastUser ? lastUser.id + 1 : 1,//id是最后一个userid加一
+                    id: lastUser ? lastUser.id + 1 : 1,//id是最后一个userid加一,保证是最新的id
                     name: obj.name,
                     password: obj.password
                 };
